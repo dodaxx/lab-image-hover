@@ -27,8 +27,8 @@ img.addEventListener("load", () => {
       const alpha = imageData[pixelIndex + 3];
 
       particles.push({
-        x: column * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
-        y: row * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
+        x: Math.floor(Math.random() * numColumns * PARTICLE_DIAMETER),
+        y: Math.floor(Math.random() * numRows * PARTICLE_DIAMETER),
         originX: column * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
         originY: row * PARTICLE_DIAMETER + PARTICLE_DIAMETER / 2,
         color: `rgba(${red}, ${green}, ${blue}, ${alpha / 255})`,
